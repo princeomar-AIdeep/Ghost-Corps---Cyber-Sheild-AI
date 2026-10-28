@@ -1,0 +1,26 @@
+services:
+  clamav:
+    image: clamav/clamav:1.5.4-debian13-slim@sha256:9eba83760ce432270bbaf4bda2319e532c3df8627750610f9ed0a00d4480fc0c
+    restart: unless-stopped
+    environment:
+      CLAMD_CONF_TCPAddr: "0.0.0.0"
+      CLAMD_CONF_MaxScanSize: "100M"
+      CLAMD_CONF_MaxFileSize: "25M"
+      CLAMD_CONF_StreamMaxLength: "25M"
+      CLAMD_CONF_MaxRecursion: "10"
+      CLAMD_CONF_MaxFiles: "10000"
+      CLAMD_CONF_AlertExceedsMax: "yes"
+      FRESHCLAM_CHECKS: "1"
+    ports:
+      - "127.0.0.1:3310:3310"
+    volumes:
+      - clamav_database:/var/lib/clamav
+    healthcheck:
+      test: ["CMD", "clamdcheck.sh"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 6m
+
+volumes:
+  clamav_database:
