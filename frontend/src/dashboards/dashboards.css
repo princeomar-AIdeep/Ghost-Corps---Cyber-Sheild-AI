@@ -1,0 +1,461 @@
+@import "./developer-shell.css";
+@import "./developer-ide.css";
+@import "./automation-hub.css";
+@import "./ai-command-center.css";
+@import "./threat-intelligence/styles.css";
+@import "./security-testing-lab/styles.css";
+@import "./identity-network-security/styles.css";
+@import "./investigation-center/styles.css";
+@import "./ai-defense-response/styles.css";
+
+/* Dashboard heading hierarchy */
+.hero-copy h1,
+.automation-hero h1,
+.ai-hero-copy h1,
+.panel-heading h2,
+.automation-panel-header h2,
+.ai-panel-header h2 {
+  font-weight: 700;
+}
+
+/* Shell search + account menus */
+.global-search {
+  position: relative;
+}
+
+.shell-search-results {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px;
+  border: 1px solid var(--line, #123348);
+  border-radius: 10px;
+  background: #07141d;
+  box-shadow: 0 14px 40px #000a;
+}
+
+.shell-search-results button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: #d7e7f2;
+  text-align: left;
+  padding: 8px 10px;
+  border-radius: 7px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.shell-search-results button:hover {
+  background: rgba(0, 180, 220, 0.12);
+}
+
+.shell-search-results span {
+  margin-left: auto;
+  color: #6f8ea3;
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.profile-wrap {
+  position: relative;
+}
+
+.account-popover {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  z-index: 20;
+  min-width: 190px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border: 1px solid var(--line, #123348);
+  border-radius: 10px;
+  background: #07141d;
+  box-shadow: 0 14px 40px #000a;
+}
+
+.account-popover button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: #dceaf4;
+  text-align: left;
+  padding: 9px 10px;
+  border-radius: 7px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.account-popover button:hover {
+  background: rgba(0, 180, 220, 0.12);
+  color: #1be4ff;
+}
+
+.notice-dot-inline {
+  position: absolute;
+  right: 1px;
+  top: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff4b57;
+  box-shadow: 0 0 0 2px #030b11;
+}
+
+.notification-wrap .icon-button {
+  position: relative;
+}
+
+.workspace-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #14e2b4;
+  box-shadow: 0 0 8px rgba(20, 226, 180, 0.54);
+}
+
+/* AI chat bubbles when wired to existing /api/chat */
+.ai-chat-thread {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 180px;
+  max-height: 360px;
+  overflow: auto;
+  padding: 4px 2px;
+}
+
+.ai-chat-bubble {
+  border: 1px solid rgba(25, 83, 112, 0.45);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: rgba(5, 22, 31, 0.85);
+}
+
+.ai-chat-bubble.you {
+  border-color: rgba(0, 180, 220, 0.35);
+  background: rgba(0, 90, 120, 0.18);
+}
+
+.ai-chat-bubble b {
+  display: block;
+  font-size: 10px;
+  color: #7fb7cf;
+  margin-bottom: 4px;
+}
+
+.ai-chat-model {
+  color: #79a8bb;
+  font-size: 9px;
+  margin: 0 0 4px;
+}
+
+.ai-chat-bubble p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #e3eef6;
+  white-space: pre-wrap;
+}
+
+/* Section placeholders */
+.section-placeholder {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.section-placeholder-hero {
+  position: relative;
+  min-height: 160px;
+  border-radius: 12px;
+  border: 1px solid rgba(14, 97, 132, 0.28);
+  background: #061421 center / cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 24px;
+  overflow: hidden;
+}
+
+.section-placeholder-copy h1 {
+  margin: 8px 0 6px;
+  font-size: 28px;
+  letter-spacing: -0.6px;
+  color: #f3f8fc;
+}
+
+.section-placeholder-copy p {
+  margin: 0;
+  max-width: 520px;
+  color: #c5d7e4;
+  font-size: 13px;
+}
+
+.section-placeholder-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: #7eb6ce;
+}
+
+.section-placeholder-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 170, 50, 0.35);
+  background: rgba(20, 16, 8, 0.72);
+  color: #ffc56a;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.section-placeholder-panel {
+  border: 1px solid #13445b;
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(5, 18, 27, 0.99), rgba(3, 12, 19, 0.99));
+  padding: 18px 20px;
+}
+
+.section-placeholder-panel h2 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  color: #eef6fb;
+}
+
+.section-placeholder-panel p {
+  margin: 0;
+  color: #9eb4c4;
+  font-size: 12.5px;
+  line-height: 1.55;
+  max-width: 720px;
+}
+
+.section-placeholder-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.section-placeholder-primary,
+.section-placeholder-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 9px 14px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.section-placeholder-primary {
+  border: 1px solid #0ac1dd;
+  background: #0ac1dd;
+  color: #00212b;
+  font-weight: 650;
+}
+
+.section-placeholder-secondary {
+  border: 1px solid #1a5670;
+  background: rgba(5, 22, 31, 0.9);
+  color: #cfe4f1;
+}
+
+/* Legacy content living inside the new shell */
+.legacy-dashboard {
+  min-width: 0;
+}
+
+.legacy-dashboard .dashboard-grid {
+  margin: 0;
+}
+
+/* Prefer old main-dashboard hero over developer hero rules */
+.legacy-dashboard > .dashboard-grid > .center-col > .hero,
+.legacy-dashboard .center-col > .hero {
+  height: auto;
+  min-height: 168px;
+  padding: 22px 24px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  background:
+    linear-gradient(100deg, rgba(3, 14, 24, 0.92), rgba(4, 22, 36, 0.55)),
+    radial-gradient(ellipse at 80% 40%, rgba(0, 160, 220, 0.18), transparent 55%),
+    #061421;
+  background-image: none;
+  background-color: #061421;
+}
+
+.legacy-dashboard .hero::before,
+.legacy-dashboard .hero::after {
+  display: none;
+}
+
+.legacy-dashboard .hero-copy h1 {
+  font-size: 30px;
+}
+
+.legacy-dashboard .hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.legacy-dashboard .hero-quote {
+  position: relative;
+  right: auto;
+  align-self: center;
+  text-align: right;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d7e8f4;
+}
+
+/* Neutralize old style.css fixed shell rules inside the new layout */
+.new-shell .topbar {
+  position: sticky;
+  inset: auto;
+  display: grid;
+  height: 68px;
+}
+
+.new-shell .sidebar,
+.new-shell .sidebar.opened,
+.new-shell .sidebar.sidebar-open {
+  position: relative;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  width: auto;
+  transform: none;
+  box-shadow: none;
+}
+
+.new-shell .layout {
+  display: grid;
+}
+
+.new-shell .main-area {
+  margin-left: 0;
+  padding: 0;
+}
+
+@media (max-width: 930px) {
+  .new-shell .sidebar {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    bottom: 0;
+    width: 270px;
+    z-index: 9;
+    transform: translateX(-101%);
+  }
+
+  .new-shell .sidebar.sidebar-open {
+    transform: translateX(0);
+    box-shadow: 12px 0 45px #0008;
+  }
+}
+
+/* Modal stays above the new shell */
+.modal-backdrop {
+  z-index: 40;
+}
+
+/* ── Voice Commander (Task 3) ─────────────────────────────────────────────── */
+.voice-cmd-fab{position:fixed;bottom:22px;right:22px;z-index:50;display:flex;align-items:center;gap:7px;padding:10px 16px;border:1px solid rgba(13,212,239,.45);border-radius:28px;background:linear-gradient(135deg,#061d2b,#030e17);color:#0bd4ef;font-size:12px;font-weight:600;cursor:pointer;box-shadow:0 4px 24px rgba(0,0,0,.5);transition:border-color .18s,box-shadow .18s}
+.voice-cmd-fab:hover{border-color:#0bd4ef;box-shadow:0 4px 28px rgba(11,212,239,.2)}
+.voice-commander{position:fixed;bottom:22px;right:22px;z-index:50;width:310px;border:1px solid rgba(11,200,220,.35);border-radius:14px;background:rgba(4,17,26,.97);box-shadow:0 8px 40px rgba(0,0,0,.6);overflow:hidden;backdrop-filter:blur(8px)}
+.voice-commander.is-listening{border-color:rgba(11,200,220,.7);box-shadow:0 0 0 3px rgba(11,200,220,.12),0 8px 40px rgba(0,0,0,.6)}
+.voice-cmd-header{display:flex;align-items:center;justify-content:space-between;padding:10px 13px;border-bottom:1px solid rgba(19,80,104,.55);background:rgba(5,22,34,.8)}
+.voice-cmd-title{display:flex;align-items:center;gap:7px;color:#9cf5ff;font-size:11px;font-weight:700;letter-spacing:.04em}
+.voice-cmd-header-actions{display:flex;gap:5px}
+.voice-icon-btn{width:24px;height:24px;display:grid;place-items:center;border:1px solid rgba(20,80,100,.6);border-radius:5px;background:transparent;color:#7db8cb;font-size:11px;cursor:pointer}
+.voice-icon-btn:hover{border-color:#0bd4ef;color:#0bd4ef}
+.voice-cmd-unsupported,.voice-cmd-error{padding:9px 13px;font-size:10px;color:#ff8a8a;background:rgba(255,45,59,.06);border-bottom:1px solid rgba(255,45,59,.2)}
+.voice-cmd-body{padding:13px}
+.voice-mic-btn{width:100%;height:44px;display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid rgba(13,200,230,.35);border-radius:9px;background:linear-gradient(135deg,#072030,#040f18);color:#7cd9f0;font-size:12px;font-weight:600;cursor:pointer;transition:all .18s}
+.voice-mic-btn.active{border-color:rgba(255,80,100,.6);background:linear-gradient(135deg,#200d12,#120408);color:#ff8090}
+.voice-mic-btn:hover:not(:disabled){border-color:#0bd4ef;color:#0bd4ef}
+.voice-mic-btn:disabled{opacity:.4;cursor:not-allowed}
+.voice-cmd-status{margin-top:9px;min-height:22px;font-size:10px;text-align:center}
+.voice-active-dot{display:flex;align-items:center;justify-content:center;gap:3px;color:#3ef0aa}
+.voice-active-dot i{display:inline-block;width:4px;height:4px;border-radius:50%;background:currentColor;animation:vc-pulse .9s ease-in-out infinite alternate}
+.voice-active-dot i:nth-child(2){animation-delay:.2s}
+.voice-active-dot i:nth-child(3){animation-delay:.4s}
+@keyframes vc-pulse{to{transform:scaleY(2.4);opacity:.5}}
+.voice-inactive{color:#5a8094}
+.voice-transcript{margin-top:8px;padding:7px 10px;border:1px solid rgba(13,200,230,.2);border-radius:7px;background:rgba(10,45,63,.2);color:#b8d8e8;font-size:10.5px;display:flex;align-items:flex-start;gap:7px}
+.voice-last-cmd{margin-top:7px;padding:6px 10px;border-radius:7px;font-size:10px;display:flex;align-items:center;gap:7px}
+.voice-last-cmd.ok{border:1px solid rgba(62,240,170,.3);background:rgba(62,240,170,.06);color:#3ef0aa}
+.voice-last-cmd.fail{border:1px solid rgba(255,80,90,.3);background:rgba(255,45,59,.06);color:#ff9090}
+.voice-cmd-help{padding:11px 13px;border-top:1px solid rgba(19,80,104,.45);background:rgba(5,18,27,.7)}
+.voice-help-title{font-size:10px;font-weight:700;color:#8eb8c8;margin-bottom:8px;letter-spacing:.05em}
+.voice-help-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.voice-help-grid>div b{display:block;font-size:9px;font-weight:700;color:#d0e8f2;margin-bottom:4px}
+.voice-help-grid>div small{font-size:8.5px;color:#6a90a3;line-height:1.7;display:block}
+.voice-cmd-log{max-height:100px;overflow-y:auto;border-top:1px solid rgba(19,80,104,.45)}
+.voice-log-entry{display:flex;align-items:baseline;gap:8px;padding:4px 13px;font-size:9px;border-bottom:1px solid rgba(20,60,80,.25)}
+.voice-log-entry time{color:#476a7a;flex:none}
+.voice-log-entry.log-success span{color:#3ef0aa}
+.voice-log-entry.log-warn span{color:#ffcc40}
+.voice-log-entry.log-info span{color:#8ab8cb}
+.voice-pulse-ring{position:absolute;inset:0;pointer-events:none;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:14px}
+.voice-pulse-ring i{position:absolute;border-radius:50%;border:1px solid rgba(11,212,239,.3);animation:vc-ring 2s ease-out infinite}
+.voice-pulse-ring i:nth-child(2){animation-delay:.6s}
+.voice-pulse-ring i:nth-child(3){animation-delay:1.2s}
+@keyframes vc-ring{0%{width:40px;height:40px;opacity:.7}100%{width:300px;height:300px;opacity:0}}
+
+/* ── Security Monitor (Task 6) ──────────────────────────────────────────────── */
+.sec-monitor{position:fixed;bottom:0;left:0;right:0;z-index:45;border-top:1px solid rgba(19,80,104,.5);background:rgba(3,11,17,.96);backdrop-filter:blur(6px);transition:border-color .2s}
+.sec-monitor.ok{border-top-color:rgba(34,197,94,.35)}
+.sec-monitor.threat{border-top-color:rgba(255,45,59,.55)}
+.sec-monitor.offline{border-top-color:rgba(100,120,140,.3)}
+.sec-monitor-bar{width:100%;display:flex;align-items:center;gap:8px;padding:5px 18px;border:0;background:transparent;color:#7db8cb;font-size:10px;text-align:left}
+.sec-monitor-toggle{display:flex;align-items:center;gap:8px;flex:1;min-width:0;padding:0;border:0;background:transparent;color:#7db8cb;font:inherit;cursor:pointer;text-align:left}
+.sec-monitor-toggle:hover{background:rgba(11,212,239,.03)}
+.sec-shield-icon{color:#0bd4ef;flex:none}
+.sec-monitor.ok .sec-shield-icon{color:#22c55e}
+.sec-monitor.threat .sec-shield-icon{color:#ff4b57}
+.sec-monitor.offline .sec-shield-icon{color:#556677}
+.sec-status-text{flex:1;font-size:10px;color:#8ab8cb}
+.sec-monitor.threat .sec-status-text{color:#ff8090}
+.sec-monitor.offline .sec-status-text{color:#556677}
+.sec-monitor-label{font:700 8px/1 'DM Mono',monospace;letter-spacing:.1em;color:#3b6475;opacity:.8}
+.sec-scan-now{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border:1px solid rgba(13,200,230,.3);border-radius:5px;background:transparent;color:#4dc9e3;font-size:9px;cursor:pointer;flex:none}
+.sec-scan-now:hover:not(:disabled){border-color:#0bd4ef;color:#0bd4ef}
+.sec-scan-now:disabled{opacity:.35;cursor:not-allowed}
+.sec-monitor-log{border-top:1px solid rgba(19,80,104,.45);max-height:120px;overflow-y:auto}
+.sec-log-entry{display:flex;align-items:baseline;gap:8px;padding:4px 18px;font-size:9px;border-bottom:1px solid rgba(20,60,80,.2)}
+.sec-log-entry time{color:#3b6475;flex:none}
+.sec-log-entry.log-ok span{color:#22c55e}
+.sec-log-entry.log-threat span{color:#ff8090}
+.sec-log-entry.log-warn span{color:#ffcc40}
+.sec-log-entry.log-info span{color:#7090a0}
+.spin{animation:sec-spin .9s linear infinite}
+@keyframes sec-spin{to{transform:rotate(360deg)}}
+/* Shift voice commander fab up to avoid overlap with monitor bar */
+.voice-cmd-fab,.voice-commander{bottom:42px}
