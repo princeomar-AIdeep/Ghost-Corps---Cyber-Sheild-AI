@@ -1,0 +1,24 @@
+CYBER-AGENT AI — LANDING PAGE ASSET PACK
+
+Purpose: visual reference and standalone image assets for implementing the public landing page in Codex.
+
+FILES
+- landing-page-reference-full.png: complete five-part landing page concept collage. Use as the overall visual reference, NOT as the page background.
+- reference-01-hero-section.png: enlarged crop of hero/header concept.
+- reference-02-features-section.png: enlarged crop of features grid.
+- reference-03-how-it-works-section.png: enlarged crop of workflow section.
+- reference-04-use-cases-section.png: enlarged crop of audience/use cases section.
+- reference-05-pricing-and-cta-section.png: enlarged crop of pricing and final CTA.
+- cyber-agent-logo-reference-upscaled.png: logo crop from the supplied dashboard screenshot. Upscaling does not recreate missing original detail; prefer a standalone vector/source logo if available.
+- hero-cyber-agent-city-high-resolution.png: standalone high-resolution futuristic cyber-agent/city artwork.
+- ai-assistant-avatar-high-resolution.png: standalone assistant character artwork.
+- digital-globe-network-high-resolution.png: standalone digital globe/network artwork.
+
+IMPORTANT
+The five section references are crops from one generated composite concept image, enlarged for inspection; they are not original full-resolution web assets. The standalone character/globe images are separate generated artwork that matches the overall aesthetic, not guaranteed exact pixels from the composite. Use the full composite only as a visual guide. Build actual HTML/CSS components and use standalone assets in the page. Do not display the composite screenshot as the website.
+
+RECOMMENDED PROJECT PLACEMENT
+Copy the standalone assets into your existing project's public/assets/ directory. Keep reference images in a reference/ folder or accessible to Codex, but do not serve the full reference as a page background.
+
+DESIGN DIRECTION
+Dark navy/black cybersecurity landing page, neon cyan/electric blue accents, white typography, restrained glows, subtle blue borders, cinematic cyber-agent hero, clear CTA, feature grid, four-step workflow, use-case cards, pricing plans, final CTA and footer. Match the reference concept while keeping all text readable and responsive.
