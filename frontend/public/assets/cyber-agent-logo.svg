@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100" role="img" aria-labelledby="title">
+  <title id="title">CYBER-AGENT AI — Detect, Analyze, Respond</title>
+  <defs>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#55f4ff"/><stop offset="1" stop-color="#0788e8"/></linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g fill="none" stroke="url(#cyan)" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <path stroke-width="2.5" d="M47 5 76 18 91 48 76 78 47 94 18 78 3 48 18 18 47 5Z"/>
+    <path stroke-width="1.5" d="M47 12 69 23 83 48 69 72 47 86 25 72 11 48 25 23 47 12Z"/>
+    <path stroke-width="2" d="m18 18 29 18 29-18M18 78l29-18 29 18M3 48h31m26 0h31M47 5v31m0 24v34"/>
+    <path stroke-width="2.7" d="m47 36 12 12-12 12-12-12 12-12Z"/>
+    <circle cx="47" cy="48" r="3.2" fill="#71f5ff"/>
+  </g>
+  <text x="111" y="48" fill="#eaf6ff" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="700" letter-spacing=".4">CYBER-AGENT <tspan fill="#20dfff">AI</tspan></text>
+  <text x="113" y="78" fill="#36e4f5" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" letter-spacing="2.15">DETECT <tspan fill="#7894a5">|</tspan> ANALYZE <tspan fill="#7894a5">|</tspan> RESPOND</text>
+</svg>
